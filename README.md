@@ -1,6 +1,6 @@
-This is a tool based on graalson-trax, a Java based JSON transformer that uses Javascript templates to select output.
+This is a command line tool based on graalson-trax, a Java based JSON transformer that uses Javascript templates to create JSON output.
 
-
+https://github.com/warrenc5/graalson-trax
 
 ## Source data
 
