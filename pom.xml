@@ -134,7 +134,7 @@
         <dependency>
             <groupId>mobi.mofokom</groupId>
             <artifactId>graalson-trax</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
+            <version>1.0.3</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
