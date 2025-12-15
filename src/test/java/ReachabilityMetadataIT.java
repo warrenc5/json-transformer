@@ -5,7 +5,6 @@ import jakarta.json.JsonStructure;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.xml.transform.TransformerException;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;

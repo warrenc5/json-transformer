@@ -128,7 +128,7 @@
                     </execution>
                 </executions>
             </plugin>
-             <plugin>
+            <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.1.2</version>
                 <executions>
@@ -151,6 +151,12 @@
             <groupId>mobi.mofokom</groupId>
             <artifactId>graalson-trax</artifactId>
             <version>1.0.4-SNAPSHOT</version>
+        </dependency>
+        <!-- TODO: remove - use transitive dep -->
+        <dependency>
+            <groupId>mobi.mofokom</groupId>
+            <artifactId>graalson</artifactId>
+            <version>1.0.7-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

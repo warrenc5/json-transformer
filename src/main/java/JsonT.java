@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 import java.io.Reader;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.transform.Result;
@@ -32,14 +33,15 @@ public class JsonT {
     public static final String STDIN = "-",
             STDOUT = "-",
             UTF8 = "UTF-8",
-            IDENTITY = "identity.js";
+            IDENTITY = "identity.js",
+            SPACES = "4";
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
             throws IOException, TransformerConfigurationException, TransformerException {
-        if (args.length == 0) {
+        if (args.length == 0 || Arrays.asList("/?", "-?", "-h", "--help").contains(args[0].trim())) {
             try (
                     PrintWriter out = new PrintWriter(System.err); InputStream in
                     = ClassLoader.getSystemClassLoader().getResourceAsStream("README.md")) {
@@ -47,6 +49,7 @@ public class JsonT {
                 while ((c = in.read()) != -1) {
                     out.write(c);
                 }
+                out.flush();
             }
             System.exit(1);
         }
@@ -72,8 +75,13 @@ public class JsonT {
                 : args[3].isBlank()
                 ? UTF8
                 : args[3];
+        String spaces = args.length < 5
+                ? SPACES
+                : args[4].isBlank()
+                ? SPACES
+                : args[4];
         Map<String, Object> config = new HashMap<>();
-        config.put("spaces", Integer.valueOf(4));
+        config.put("spaces", Integer.valueOf(spaces));
         JsonWriterFactory wfactory = Json.createWriterFactory(config);
         JsonWriter jwriter = wfactory.createWriter(
                 STDOUT.equals(outputFile)
