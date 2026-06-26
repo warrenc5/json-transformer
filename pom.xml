@@ -9,7 +9,7 @@
     <name>Json Transmogrifier</name>
     <groupId>au.com.devnull</groupId>
     <artifactId>json-transmogrify</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -249,7 +249,7 @@
         <connection>scm:git:git@github.com:warrenc5/json-transmogrify.git</connection>
         <developerConnection>scm:git:git@github.com:warrenc5/json-transmogrify.git</developerConnection>
         <url>https://github.com/warrenc5/json-transmogrify</url>
-        <tag>json-transmogrify-1.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
 </project>
