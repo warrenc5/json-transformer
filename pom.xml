@@ -41,6 +41,12 @@
                 </includes>
                 <targetPath>.</targetPath>
             </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/JsonT.java</include>
+                </includes>
+            </resource>
         </resources>
         <plugins>
             <plugin>
@@ -55,7 +61,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>JsonT.java</mainClass>
+                            <mainClass>JsonT</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>
